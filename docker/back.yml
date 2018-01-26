@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+###################
+#      BACK       #
+###################
+
+    http-back:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - /var/www/emargement/back:/var/www/back
+            - /var/www/emargement/back/back.conf:/etc/nginx/conf.d/default.conf
+            - ./nginx.conf:/etc/nginx/nginx.conf
+        links:
+            - php-back:php
+        networks:
+            - emargement
+    php-back:
+        build: ./
+        working_dir: /var/www/back
+        volumes:
+            - /var/www/emargement/back:/var/www/back
+            - ~/.composer:/root/.composer
+        links:
+            - mysql-back:db
+        networks:
+            - emargement
+    mysql-back:
+        image: mysql:latest
+        ports:
+            - "8091:3306"
+        volumes:
+            - ../back/db_data:/var/lib/mysql/
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: emargement-back
+        networks:
+            - emargement
+   
+networks:
+    emargement:
+        external: true
