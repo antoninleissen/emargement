@@ -1,4 +1,4 @@
-# emargement
+# Emargement
 A laravel project to develop an API for register students
 
 Before beginning, you need to install two things :
@@ -37,4 +37,22 @@ npm install
 ``` 
 
 # Migrate and Seeds
+
+Open a terminal and do : 
+```
+sudo docker ps
+```
+Pick the id number of php docker then do :
+```
+sudo docker exec -ti {yournumber} bash
+```
+Then do for migrate (database creation) :
+```
+php artisan migrate
+```
+And do for seed (generate data):
+```
+php artisan db:seed
+```
+
 
