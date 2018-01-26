@@ -3,9 +3,11 @@ A laravel project to develop an API for register students
 
 Before beginning, you need to install two things :
   - Install docker : 
-            ubuntu install link : https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
-            mac install link : https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac
-            windows install link : https://docs.docker.com/docker-for-windows/install/
+  ```
+  ubuntu install link : https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+  mac install link : https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac
+  windows install link : https://docs.docker.com/docker-for-windows/install/
+  ```          
   - Install docker-compose : https://docs.docker.com/compose/install/
 
 # Start docker
