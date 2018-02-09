@@ -27,6 +27,8 @@ services:
             - mysql-back:db
         networks:
             - emargement
+        expose:
+            - 9000
     mysql-back:
         image: mysql:latest
         ports:
@@ -38,7 +40,7 @@ services:
             MYSQL_DATABASE: emargement-back
         networks:
             - emargement
-   
+
 networks:
     emargement:
         external: true
