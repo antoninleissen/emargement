@@ -14,6 +14,7 @@ Before beginning, you need to install two things :
 
 Go on your docker directory, then in a terminal just do that : 
 ```
+sudo docker network create emargement
 sudo docker-compose -f back.yml build
 ```
 then start your docker : 
@@ -34,6 +35,7 @@ sudo docker exec -ti {yournumber} bash
 Then do :
 ```
 composer.phar install
+php artisan passport:install
 ```
 
 Go on your back directory, then in a terminal do : 
