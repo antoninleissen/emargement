@@ -2,15 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: herpreck
- * Date: 19/03/18
- * Time: 15:09
+ * Date: 20/03/18
+ * Time: 09:39
  */
+
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Lesson extends Model
+class Speaker extends Model
 {
     protected $casts = [
         'id'        => 'int'

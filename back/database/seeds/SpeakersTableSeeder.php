@@ -2,14 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: herpreck
- * Date: 19/03/18
- * Time: 15:15
+ * Date: 20/03/18
+ * Time: 09:56
  */
 
 
 use Illuminate\Support\Facades\DB;
 
-class LessonsTableSeeder extends DataSeeder
+class SpeakersTableSeeder extends DataSeeder
 {
     /**
      * Run the database seeds.
@@ -18,17 +18,18 @@ class LessonsTableSeeder extends DataSeeder
      */
     public function run()
     {
-        DB::table('lessons')->truncate();
+        DB::table('speakers')->truncate();
 
-        $data = $this->getData('Lessons');
+        $data = $this->getData('speaker');
 
         $app = app()::getInstance();
-        $lessonManager = $app->make(\App\Models\Lesson::class);
+        $roomManager = $app->make(\App\Models\Room::class);
         foreach ($data as $datum){
-            $lessonManager->create([
+            $roomManager->create([
                 'name'=>$datum->name
             ]);
         }
+
 
     }
 }

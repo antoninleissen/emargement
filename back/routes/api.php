@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,4 +19,6 @@ Route::group(['middleware' => []], function () {
     Route::get('account/getAccount', 'Api\AccountController@getAccount');
     Route::resource('account', 'Api\AccountController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
     Route::resource('test', 'Api\TestController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
+    Route::resource('lesson', 'Api\LessonController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
+    Route::resource('speaker', 'Api\SpeakerController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
 });
