@@ -21,5 +21,5 @@ Route::group(['middleware' => []], function () {
     Route::resource('test', 'Api\TestController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
     Route::resource('lesson', 'Api\LessonController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
     Route::resource('speaker', 'Api\SpeakerController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
-    Route::resource('classroom', 'Api\SpeakerController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
+    Route::resource('classroom', 'Api\ClassroomController', ['only' => ['index', 'show', 'update', 'store', 'destroy']]);
 });
