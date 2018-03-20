@@ -3,15 +3,16 @@
  * Created by PhpStorm.
  * User: herpreck
  * Date: 20/03/18
- * Time: 09:37
+ * Time: 10:18
  */
 
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Speaker;
 
-class SpeakerController extends ApiController
+use App\Models\Classroom;
+
+class ClassroomController extends ApiController
 {
     protected $parametersOperators = [];
     protected $allowedOrderColumns = ['id'];
@@ -22,6 +23,6 @@ class SpeakerController extends ApiController
      * @return string
      */
     protected function getManagerClassName() {
-        return Speaker::class;
+        return Classroom::class;
     }
 }
