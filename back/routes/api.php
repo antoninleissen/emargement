@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['middleware' => []], function () {
+Route::group(['middleware' => ['api']], function () {
 
     // USER SECTION
     Route::get('account/whoAmI', 'Api\AccountController@getWhoAmI');

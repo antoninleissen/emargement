@@ -20,7 +20,7 @@ class LessonsTableSeeder extends DataSeeder
     {
         DB::table('lessons')->truncate();
 
-        $data = $this->getData('Lessons');
+        $data = $this->getData('lessons');
 
         $app = app()::getInstance();
         $lessonManager = $app->make(\App\Models\Lesson::class);
